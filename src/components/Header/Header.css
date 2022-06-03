@@ -1,0 +1,23 @@
+.Navbar {
+  background-color: #1f242d !important;
+}
+
+.Brand {
+  display: flex;
+  align-items: center;
+}
+
+.HomeButton {
+  color: #facc15;
+  padding: 8px;
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.HomeButton:hover {
+  opacity: 80%;
+  cursor: pointer;
+  transition: 600ms;
+  background-color: black;
+}
