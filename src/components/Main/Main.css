@@ -1,3 +1,7 @@
-section {
+.main {
   color: #a6adba;
+}
+
+.joke-setup {
+  color: aqua;
 }

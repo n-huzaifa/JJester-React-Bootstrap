@@ -5,8 +5,8 @@ import { Col, Container, Navbar, Row } from 'react-bootstrap'
 
 function Header() {
     return (
-        <Container fluid >
-            <Row className='align-items-center bg-white pt-2 pb-2'>
+        <Container fluid className='Navbar'>
+            <Row className='align-items-center pt-2 pb-2'>
                 <Col sm="auto">
                     <span className='HomeButton'>JJESTER</span>
                 </Col>

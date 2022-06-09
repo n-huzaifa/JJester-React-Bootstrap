@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react'
 import { useEffect, useState } from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
 import './Main.css'
 function Main() {
 
@@ -30,36 +31,40 @@ function Main() {
     }
 
     return (
-        <section className='main'>
-            <div >
-                <div >
+        <Container className='text-body'>
+            <div>
+                <Row>
                     {
                         joke.type === "single" ?
-                            <h1 >
+                            <span className='joke-setup'>
                                 {joke.joke}
-                            </h1>
+                            </span>
                             :
                             <>
-                                <h1 >
+                                <span className='joke-setup' >
                                     {joke.setup}
-                                </h1>
-                                <p >- {joke.delivery}</p>
+                                </span>
+                                <span className='joke-delivery' >- {joke.delivery}</span>
                             </>
                     }
                     {error === 'Request failed with status code 404' ?
-                        <h1 >
+                        <Row >
                             Check Your Internet Connection
-                        </h1>
+                        </Row>
                         : ''}
-                </div>
-                <div >
-                    <div>
-                        <p ><span >Type:</span> {joke.type}</p>
-                        <p ><span >Category:</span> {joke.category}</p>
-                    </div>
-                    <div >
-                        <div >
-                            <label >
+                </Row>
+                <Row>
+                    <Col>
+                        <p>
+                            <span >Type:</span> {joke.type}
+                        </p>
+                        <p>
+                            <span >Category:</span> {joke.category}
+                        </p>
+                    </Col>
+                    <Col>
+                        <div>
+                            <label>
                                 {safemode ?
                                     <>
                                         <span >Safe Mode🥳 </span>
@@ -76,10 +81,10 @@ function Main() {
                         <button onClick={handleClick}>
                             Refresh
                         </button>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </div>
-        </section>
+        </Container>
     )
 }
 
